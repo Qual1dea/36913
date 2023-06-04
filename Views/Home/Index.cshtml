@@ -1,0 +1,35 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <div>  
+    AYAYAYAYAY
+    @ViewBag.ZXCTIME
+    <p> Любой текст  </p>
+        @Html.ActionLink("Анкета","Form")
+    </div>
+    <div>
+        <ul>
+            Вот деньги:
+            @foreach (string str in (string[])ViewBag.Money)
+            {
+                <li>@str </li>
+            }
+        </ul>
+        <ul>
+            Вот города:
+            @foreach (string str in (string[])ViewBag.Cities)
+            {
+                <li>@str </li>
+            }
+        </ul>
+    </div>
+</body>
+</html>

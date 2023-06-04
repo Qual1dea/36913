@@ -1,0 +1,25 @@
+﻿@model Web.Models.HomeModels
+@{
+    ViewBag.Title = "Last";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <div>
+        <h1> Конец, @Model.FirstName!</h1>
+        @if (Model.Will == true)
+        {
+            @:YES YES YES
+        }
+        else
+        {
+            @:NO NO NO
+        }
+    </div>
+</body>
+</html>

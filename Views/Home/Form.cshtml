@@ -1,0 +1,30 @@
+﻿@model Web.Models.HomeModels
+
+@{
+    ViewBag.Title = "Form";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html> 
+    <head>
+    <title>@ViewBag.Title</title>
+    </head>
+    <body>
+            @using(Html.BeginForm())
+            {
+              @Html.ValidationSummary()
+             <p> Имя:     @Html.TextBoxFor(x => x.FirstName)</p>
+             <p> Фамилия: @Html.TextBoxFor(x => x.LastName)</p>
+             <p> Телефон: @Html.TextBoxFor(x => x.Phone)</p>
+             <p> Год:     @Html.TextBoxFor(x => x.Year)</p>
+             <p> Дата:    @Html.TextBoxFor(x => x.BirthDate)</p>
+            @Html.DropDownListFor(x=>x.Will, new[]
+                {
+                new SelectListItem() {Text ="YES YES YES", Value =bool.TrueString},
+                new SelectListItem() {Text ="NO NO NO", Value = bool.FalseString}
+                })
+            <p><input type="submit" value="Click" /></p>
+            }
+    </body>
+</html>
